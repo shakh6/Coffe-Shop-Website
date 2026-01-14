@@ -1,0 +1,511 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    align-items: center;
+    height: 110px;
+    position: fixed;
+    width: 100%;
+    border-bottom: 2px solid burlywood;    
+}
+header ul li{
+    transition: o.5s;
+}
+header ul{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    list-style: none;
+    font-size: 20px;
+    transition: 0.5s;
+}
+ 
+header ul li a{
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+section#home{
+    background-image: url(image.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;   
+    object-fit: cover; 
+}
+section#about{
+    background-color: black;
+    color: white;
+    padding: 30px 0;
+}
+.title h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+.title span{
+    color: burlywood;
+}
+.about-content{
+    display: flex;
+    width: 80%;
+    margin: 30px auto 0 auto;
+}
+.about-image{
+    width: 50%;
+}
+.about-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-text{
+    width: 50%;
+    background-color: #13131a;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 25px;
+}
+html, body{
+    scroll-behavior: smooth;
+}
+.header-icons{
+    font-size: 23px;
+}
+
+section#menu{
+    background-color: black;
+    color: white;
+    padding-bottom: 30px;
+} 
+.home-main h1{
+    font-size: 70px;
+    width: 60%;
+    margin-top: 10px;
+}
+.home-main p{
+    font-size: 20px;
+    margin: 10px;
+    width: 75%;
+}
+.home-main button{
+    background-color: burlywood;
+    font-size: 30px;
+    border: none;
+    width: 20%;
+    padding: 5px;
+    color: white;
+    margin-top: 10px;
+    transition: 0.7s;
+}
+.about-text h3{
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 8%;
+}
+.about-text p{
+    font-size: 20px;
+    margin: 15px;
+}
+.about-text button{
+    margin-left: 3%;
+    width: 25%;
+    padding: 2%;
+    font-size: 20px;
+    color: white;
+    background-color: burlywood ;
+    border: none;
+    transition: 0.7s
+}
+.menu-cards{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    gap: 15px;
+    margin-top: 20px;
+}
+.menu-card{
+    height: 320px;
+    border: 1px solid burlywood;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+    transition: 0.5s;
+}
+.menu-card h3{
+    padding: 7px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.menu-card h2{
+    padding: 10px;
+    font-size: 25px;
+}
+.menu-card span{
+    text-decoration: line-through;
+    font-size: 15px;
+    color: grey;
+}
+.menu-card button{
+    padding: 10px 35px 10px 35px;
+    color: black;
+    background-color: burlywood;
+    border: none;
+    transition: 0.7s;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.menu-card img{
+    height: 35%;
+    width: 40%;
+}
+.button-about:hover{
+    transform: scaleX(1.2);
+     letter-spacing: px;
+}
+header ul li a:hover{
+    color:burlywood ;
+}
+.button-menu:hover{
+    transform: scaleX(1.2);
+    letter-spacing: 4px;
+}
+header ul li a:hover::before{
+    border-bottom: calc(1px * -2);
+    opacity: 1;
+}
+header ul li a{
+    position: relative;
+}
+header ul li a::before{
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid burlywood;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;  
+    opacity: 0;
+    transition: 0.7s;
+}
+.menu-card:hover{
+    background-color: white;
+    color: black;
+}
+section#products{
+    background-color: black;
+    color: white;
+    padding-bottom: 30px;
+}
+.product-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: 0 auto;
+    gap: 15px;
+    margin-top: 25px;
+}
+.product-card{
+    height: 500px;
+    border: 1px solid dimgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;  
+}
+.product-card img{
+    margin-top: 20px;
+}
+.product-card h2{
+    font-size: 20px;
+    width: 50%;
+    text-align: center;
+    margin: 10px;
+}
+.product-card .stars{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: burlywood;
+    margin: 20px;
+}
+.product-card h3{
+    font-size: 30px;
+    margin-top: 20px;
+}
+.product-card span{
+    text-decoration: line-through;
+    color: gray;
+    font-size: 17px;
+}
+.product-card .icons{
+    display: flex;
+    font-size: 25px;
+    top: 50px;
+    justify-content: space-between;
+    width: 40%;
+}
+.product-card .icons a{
+    text-decoration: none;
+    color: white;
+}
+.product-card .icon{
+    border: 2px solid grey;
+    padding: 7px;
+    transition: 0.5s;
+}
+.product-card .icon:hover{
+    background-color: burlywood;
+}
+section#review{
+    background-color: black;
+    color: white;
+    padding-bottom: 30px;
+}
+section#review h1{
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+} 
+ section#review h1 span{
+  padding-left: 10px;
+}
+.review-card{
+  border: 2px solid gray;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.review-cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 30px auto 0 auto;
+  width: 90%;
+  gap: 20px;
+}
+.review-card .stars{
+  color: burlywood;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+.image-review{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.image-card img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.review-cards p{
+  text-align: center;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.review-cards h3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  font-size: 20px;
+}
+.review-cards .image-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+section#contact{
+    background-color: black;
+    color: white;
+}
+.whole{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.sign{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(48, 47, 55);
+    flex-direction: column;
+    width: 650px;
+}
+.sign .boxicon i{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(48, 47, 55);
+    padding-top: 15px;
+    font-size: 25px;
+}
+.sign input{
+    font-size: 20px;
+    margin: 0 auto;
+    width: 80%;
+    background-color: #13131a;
+}
+.sign h1{
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+}
+.sign button{
+    width: 40%;
+    margin: 0 auto 40px auto;
+    background-color: burlywood;
+    font-size: 30px;
+    transition: 0.6s;
+}
+.button-contact:hover{
+    letter-spacing: 4px;
+    transform: scaleX(1.2);
+}
+section#blogs{
+    background-color: black;
+    color: white;
+}
+.blog-cards{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px auto 0 auto;
+    padding: 20px;
+}
+.blog-card{
+    height: 500px;
+    width: 30%;
+    border: 3px solid gray;
+}
+.blog-card .image{
+    height: 285px;
+    overflow: hidden;
+}
+.blog-card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.blog-cards h3{
+    display: flex;
+    text-transform: uppercase;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 14px;
+}
+.blog-cards p:nth-child(3){
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 14px;
+    text-transform: uppercase;
+    color: burlywood;
+}
+.blog-cards h3:hover{
+    color: burlywood;
+    transition: 0.6s;
+}
+.blog-cards p:nth-child(4){
+    font-size: 20px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 14px;
+}
+.blog-cards button{
+    font-size: 20px;
+    padding: 8px;
+    width: 40%;
+    margin: 20px 0 0 30px;
+    height: 36px;
+    background-color: burlywood;
+    color: white;
+    transition: 0.6s;
+}
+.blog-cards button:hover{
+    transition: 0.7s;
+    letter-spacing: 3px;
+}
+.blog-card:hover img{
+    transform: scale(1.12);
+}
+footer{
+    height: 250px;
+    background-color: #14141c;
+}
+.footer-icons a{
+    text-decoration: none;
+    color: white;
+}
+.footer-icons{
+    display: flex;
+    font-size: 30px;
+    justify-content: space-between;
+    width: 24%;
+    margin: 0 auto;
+    text-decoration: none;
+}
+.footer-icon{
+    border: 2px solid dimgray;
+    padding: 8px;
+    border-radius: 50%;
+    margin: 30px auto 0 auto;
+    transition: 0.5s;
+}
+.footer-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin: 30px auto 0 auto;   
+}
+.button-footer{
+    padding: 10px;
+    width: 80px;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid gray;
+    transition: 0.7s;
+}
+footer h3 span{
+    color: burlywood;
+}
+footer h3{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 44px;
+    /* font-weight: 100px; */
+    color: white;
+}
+.button-footer:hover{
+    background-color: burlywood;
+}
+.footer-icon:hover{
+    background-color: burlywood;
+}
+
+
+
+
